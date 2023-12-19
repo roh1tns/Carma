@@ -1,0 +1,37 @@
+{% extends "base.html" %}
+{% load static %}
+
+{% block title %}Carma{% endblock title %}
+
+{% block css_files %}
+    <link rel="stylesheet" href="{% static "landing_page/landing_page.css" %}">
+{% endblock css_files %}
+
+
+{% block content %}
+    <section class="hero-section container">
+        <div class="hero-text">
+            <h1>Reduce your carbon footprint. <span class="highlighted">Comfortably!</span></h1>
+            <p>Whether you need a ride or want to share your car, Carma helps you save money, reduce emissions, and make new friends.</p>
+        </div>
+        <img src="{% static "landing_page/images/hero-img.jpeg" %}" alt="" class="hero-img">
+    </section>
+
+    <section class="working">
+        <h1 class="hiw-heading">How it works</h1>
+        <div class="hiw-wrap container">
+            <div class="work-box">
+                <h1>1</h1>
+                <p>Enter your desired starting point and destination into the Carma application</p>
+            </div>
+            <div class="work-box">
+                <h1>2</h1>
+                <p>Select one of the available rides for the selected route and confirm with the vehicle owner</p>
+            </div>
+            <div class="work-box">
+                <h1>3</h1>
+                <p>Enjoy your ride! All for good Carma :)</p>
+            </div>
+        </div>
+    </section>
+{% endblock content %}

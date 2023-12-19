@@ -1,0 +1,44 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{% block title %}{% endblock title %}</title>
+    <link rel="stylesheet" href="{% static "styles.css" %}">
+    {% block css_files %}{% endblock css_files %}
+</head>
+<body>
+    <section class="navbar">
+        <nav class="container">
+            <a href="/"><img src="{% static "images/Carma_white.png" %}" alt="" class="logo"></a>
+            <div class="nav-links">
+                <a href="/find-a-ride">Find a Ride</a>
+                <a href="#">Link 2</a>
+                <a href="#">Link 3</a>
+            </div>
+        </nav>
+    </section>
+    {% block content %}{% endblock content %}
+    <section class="footer">
+        <footer class="container">
+            <img src="{% static "images/Carma_white.png" %}" alt="" class="logo">
+
+            <div class="footer-links">
+                <a href="#">Find a Ride</a>
+                <a href="#">Link 2</a>
+                <a href="#">Link 3</a>
+                <a href="#">Link 4</a>
+            </div>
+            <div class="footer-socials">
+                <a href="#">logo 1</a>
+                <a href="#">logo 2</a>
+                <a href="#">logo 3</a>
+                <a href="#">logo 4</a>
+            </div>
+        </footer>
+    </section>
+    
+</body>
+</html>
